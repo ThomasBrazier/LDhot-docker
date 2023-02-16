@@ -6,14 +6,11 @@ ifndef MULTI
     MULTI = 0
 endif
 
-CPP = g++
-#CPP = g++-mp-4.8
-CPPFLAGS = -Wall -Wextra -O2 -m64 -mtune=native -std=c++11 
+CPP = g++-10
+CPPFLAGS = CC=gcc-10 CXX=g++-10 LD=g++-10 -Wall -Wextra -O2 -m64 -mtune=native -std=c++11 
 ifeq ($(MULTI), 1)
     CPPFLAGS += -fopenmp
 endif
-#CPPFLAGS = -Wall -Wextra -m64 -O2 
-#CPPFLAGS = -g
 
 all: ldhot ldhot_summary
 
