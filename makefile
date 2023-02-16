@@ -6,7 +6,7 @@ ifndef MULTI
     MULTI = 0
 endif
 
-CPP = g++-10
+CPP = g++
 CPPFLAGS = CC=gcc-10 CXX=g++-10 LD=g++-10 -Wall -Wextra -O2 -m64 -mtune=native -std=c++11 
 ifeq ($(MULTI), 1)
     CPPFLAGS += -fopenmp
